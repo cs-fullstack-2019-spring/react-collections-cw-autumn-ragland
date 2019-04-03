@@ -3,7 +3,7 @@ import './App.css';
 import Address from "./Address";
 
 class DataStructure extends Component {
-
+    //on click console log item key
     logKey = (e) =>{
         console.log(this.props.eachEl.id)
     };
@@ -12,8 +12,8 @@ class DataStructure extends Component {
 
         return (
             //structure and render each data item
-            <div>
-                <button onClick={this.logKey}>ID: {this.props.eachEl.id}</button>
+            <div onClick={this.logKey}>
+                <p>ID: {this.props.eachEl.id}</p>
                 <p>name: {this.props.eachEl.name}</p>
                 <p>username: {this.props.eachEl.username}</p>
                 <p>email: {this.props.eachEl.email}</p>

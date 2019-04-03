@@ -4,6 +4,7 @@ import './App.css';
 class Address extends Component {
     render() {
         return (
+            //structure and render each address item
             <div>
                 <li>street: {this.props.address.street}</li>
                 <li>suite: {this.props.address.suite}</li>
