@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
+import Address from "./Address";
 
 class DataStructure extends Component {
+
+    logKey = (e) =>{
+        console.log(this.props.eachEl.id)
+    };
+
     render() {
 
         return (
             //structure and render each data item
             <div>
-                <p>ID: {this.props.eachEl.id}</p>
+                <button onClick={this.logKey}>ID: {this.props.eachEl.id}</button>
                 <p>name: {this.props.eachEl.name}</p>
                 <p>username: {this.props.eachEl.username}</p>
                 <p>email: {this.props.eachEl.email}</p>
-                <p>address</p>
-                <li>street: {this.props.eachEl.address.street}</li>
-                <li>suite: {this.props.eachEl.address.suite}</li>
-                <li>city: {this.props.eachEl.address.city}</li>
-                <li>zipcode: {this.props.eachEl.address.zipcode}</li>
-                <li>geo lat: {this.props.eachEl.address.geo.lat} geo lng: {this.props.eachEl.address.geo.lng}</li>
+                <p>Address</p>
+                <Address address={this.props.eachEl.address}/>
                 <p>phone number: {this.props.eachEl.phone}</p>
                 <p>website: {this.props.eachEl.website}</p>
                 <p>company</p>
